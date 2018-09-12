@@ -10,6 +10,6 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def game
-    Game.find(params[:game_id])
+    Game.find(game_params[:game_id])
   end
 end
