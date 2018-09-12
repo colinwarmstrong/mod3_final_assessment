@@ -4,8 +4,8 @@ class OxfordDictionaryService
     @source_language = source_language
   end
 
-  def validate_word(word)
-    response = conn.get("inflections/#{@source_language}/#{word}")
+  def validate_word(word = 'foxes')
+   response = conn.get("inflections/#{@source_language}/#{word}")
     if response.status == 200
       word_information = JSON.parse(response.body, symbolize_names: true)
       message(word_information)
@@ -25,7 +25,6 @@ class OxfordDictionaryService
   end
 
   def message(word_info)
-    binding.pry
     "'#{word_info[:results].last[:word]}' is a valid word and its root form is '#{word_info[:results][]}'"
   end
 end

@@ -1,9 +1,10 @@
 class WelcomeController < ApplicationController
   def index
+    @word_validation_presenter = WordValidationPresenter.new(welcome_params[:word]) if params[:word]
   end
 
   def create
-    @word_validation_presenter = WordValidationPresenter.new(welcome_params[:word])
+    redirect_to root_path
   end
 
   private

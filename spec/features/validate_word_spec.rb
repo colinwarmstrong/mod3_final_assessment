@@ -7,7 +7,7 @@ describe 'A guest user' do
       # When I visit "/"
       visit root_path
       # And I fill in a text box with "foxes"
-      fill_in :word, with: 'foxez'
+      fill_in :word, with: 'foxes'
       # And I click "Validate Word"
       click_on 'Validate Word'
       # Then I should see a message that says "'foxes' is a valid word and its root form is 'fox'."
