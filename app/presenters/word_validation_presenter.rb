@@ -5,17 +5,21 @@ class WordValidationPresenter
 
   def word_validation
     if response.status == 200
-      word_information = JSON.parse(response.body, symbolize_names: true)
-      message(word_information)
+      message(parse_response)
     else
-      "'#{@word}' is not a valid word."
+      "'#{word}' is not a valid word."
     end
   end
 
   private
+  attr_reader :word
 
   def response
-    OxfordDictionaryService.new.word_information(@word)
+    @response ||= OxfordDictionaryService.new.word_information(word)
+  end
+
+  def parse_response
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def message(word_info)

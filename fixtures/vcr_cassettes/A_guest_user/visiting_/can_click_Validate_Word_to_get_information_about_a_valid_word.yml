@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/foxes
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/welcome
     body:
       encoding: US-ASCII
       string: ''
@@ -25,13 +25,13 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 12 Sep 2018 17:19:34 GMT
+      - Wed, 12 Sep 2018 17:37:17 GMT
       Server:
       - openresty/1.9.7.4
       Version:
       - v1.10.0-19-g9c8abf9
       Content-Length:
-      - '1667'
+      - '2744'
       Connection:
       - keep-alive
     body:
@@ -43,18 +43,48 @@ http_interactions:
             },
             "results": [
                 {
-                    "id": "foxes",
+                    "id": "welcome",
                     "language": "en",
                     "lexicalEntries": [
                         {
                             "grammaticalFeatures": [
                                 {
-                                    "text": "Third",
-                                    "type": "Person"
-                                },
-                                {
                                     "text": "Singular",
                                     "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "welcome",
+                                    "text": "welcome"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "welcome"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Exclamative",
+                                    "type": "Sentence Modality"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "welcome",
+                                    "text": "welcome"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Interjection",
+                            "text": "welcome"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
                                 },
                                 {
                                     "text": "Present",
@@ -63,38 +93,38 @@ http_interactions:
                             ],
                             "inflectionOf": [
                                 {
-                                    "id": "fox",
-                                    "text": "fox"
+                                    "id": "welcome",
+                                    "text": "welcome"
                                 }
                             ],
                             "language": "en",
                             "lexicalCategory": "Verb",
-                            "text": "foxes"
+                            "text": "welcome"
                         },
                         {
                             "grammaticalFeatures": [
                                 {
-                                    "text": "Plural",
-                                    "type": "Number"
+                                    "text": "Positive",
+                                    "type": "Degree"
                                 }
                             ],
                             "inflectionOf": [
                                 {
-                                    "id": "fox",
-                                    "text": "fox"
+                                    "id": "welcome",
+                                    "text": "welcome"
                                 }
                             ],
                             "language": "en",
-                            "lexicalCategory": "Noun",
-                            "text": "foxes"
+                            "lexicalCategory": "Adjective",
+                            "text": "welcome"
                         }
                     ],
-                    "word": "foxes"
+                    "word": "welcome"
                 }
             ]
         }
     http_version: 
-  recorded_at: Wed, 12 Sep 2018 17:19:34 GMT
+  recorded_at: Wed, 12 Sep 2018 17:37:17 GMT
 - request:
     method: get
     uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/foxes
@@ -120,7 +150,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 12 Sep 2018 17:19:35 GMT
+      - Wed, 12 Sep 2018 17:37:17 GMT
       Server:
       - openresty/1.9.7.4
       Version:
@@ -189,5 +219,5 @@ http_interactions:
             ]
         }
     http_version: 
-  recorded_at: Wed, 12 Sep 2018 17:19:35 GMT
+  recorded_at: Wed, 12 Sep 2018 17:37:17 GMT
 recorded_with: VCR 4.0.0

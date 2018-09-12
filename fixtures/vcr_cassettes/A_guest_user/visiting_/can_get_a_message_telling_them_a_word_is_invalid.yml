@@ -2,6 +2,131 @@
 http_interactions:
 - request:
     method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/welcome
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 0674b406
+      App-Key:
+      - 799d9e4dfc986238a6cea4d6fc6cf0a5
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 12 Sep 2018 17:37:18 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '2744'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "welcome",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "welcome",
+                                    "text": "welcome"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "welcome"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Exclamative",
+                                    "type": "Sentence Modality"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "welcome",
+                                    "text": "welcome"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Interjection",
+                            "text": "welcome"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
+                                },
+                                {
+                                    "text": "Present",
+                                    "type": "Tense"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "welcome",
+                                    "text": "welcome"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Verb",
+                            "text": "welcome"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Positive",
+                                    "type": "Degree"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "welcome",
+                                    "text": "welcome"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Adjective",
+                            "text": "welcome"
+                        }
+                    ],
+                    "word": "welcome"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 12 Sep 2018 17:37:18 GMT
+- request:
+    method: get
     uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/foxez
     body:
       encoding: US-ASCII
@@ -25,7 +150,7 @@ http_interactions:
       Content-Type:
       - text/html
       Date:
-      - Wed, 12 Sep 2018 17:19:35 GMT
+      - Wed, 12 Sep 2018 17:37:18 GMT
       Server:
       - openresty/1.9.7.4
       Version:
@@ -42,5 +167,5 @@ http_interactions:
         <h1>Not Found</h1>
         <p>No lemmas found matching supplied source_lang and word</p>
     http_version: 
-  recorded_at: Wed, 12 Sep 2018 17:19:35 GMT
+  recorded_at: Wed, 12 Sep 2018 17:37:18 GMT
 recorded_with: VCR 4.0.0
