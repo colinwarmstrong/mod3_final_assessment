@@ -1,6 +1,6 @@
 class Api::V1::Games::PlaysController < ApplicationController
   def create
-    render json: play, status: 201
+    render json: create_play, status: 201
   end
 
   private
@@ -9,7 +9,7 @@ class Api::V1::Games::PlaysController < ApplicationController
     params.permit(:game_id, :user_id, :word)
   end
 
-  def play
+  def create_play
     game.plays.create(user_id: game_params[:user_id], word: game_params[:word])
   end
 

@@ -1,6 +1,5 @@
 class Api::V1::GamesController < ApplicationController
   def show
-    game = Game.find(params[:game_id])
     render json: game
   end
 
@@ -8,5 +7,9 @@ class Api::V1::GamesController < ApplicationController
 
   def game_params
     params.permit(:game_id)
+  end
+
+  def game
+    Game.find(params[:game_id])
   end
 end
