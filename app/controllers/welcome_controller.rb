@@ -9,7 +9,6 @@ class WelcomeController < ApplicationController
   private
 
   def welcome_params
-    binding.pry
     params.permit(:word)
   end
 end
