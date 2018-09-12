@@ -18,8 +18,6 @@ describe 'API Games Requests' do
     expect(response).to be_successful
 
     game = JSON.parse(response.body, symbolize_names: true)
-
-    binding.pry
     
     expect(game[:game_id]).to eq(1)
     expect(game[:scores]).to be_an(Array)
