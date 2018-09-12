@@ -14,6 +14,6 @@ class Api::V1::Games::PlaysController < ApplicationController
   end
 
   def game
-    Game.find(game_params[:game_id])
+    @game ||= Game.find(game_params[:game_id])
   end
 end
