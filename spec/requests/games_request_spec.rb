@@ -15,7 +15,7 @@ describe 'API Games Requests' do
 
   context 'GET Requests' do
     it 'GET /api/v1/games/:id' do
-     get '/api/v1/games/1'
+      get '/api/v1/games/1'
 
       expect(response).to be_successful
 

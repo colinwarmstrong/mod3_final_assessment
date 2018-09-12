@@ -31,11 +31,11 @@ RSpec.configure do |config|
   end
 end
 
-# VCR.configure do |config|
-#   config.cassette_library_dir = "fixtures/vcr_cassettes"
-#   config.hook_into :webmock
-#   config.configure_rspec_metadata!
-# end
+VCR.configure do |config|
+  config.cassette_library_dir = "fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+end
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
