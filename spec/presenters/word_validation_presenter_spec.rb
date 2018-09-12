@@ -1,25 +1,27 @@
 require 'rails_helper'
 
 describe WordValidationPresenter do
-  context '#word_validation' do
-    it 'returns the correct message when given a valid word', :vcr do
-      word = 'foxes'
+  context 'Instance Methods' do
+    context '#word_validation' do
+      it 'returns the correct message when given a valid word', :vcr do
+        word = 'foxes'
 
-      presenter = WordValidationPresenter.new(word)
+        presenter = WordValidationPresenter.new(word)
 
-      message = presenter.word_validation
+        message = presenter.word_validation
 
-      expect(message).to eq("'foxes' is a valid word and its root form is 'fox'.")
-    end
+        expect(message).to eq("'foxes' is a valid word and its root form is 'fox'.")
+      end
 
-    it 'returns the correct message when given an invalid word', :vcr do
-      word = 'foxez'
+      it 'returns the correct message when given an invalid word', :vcr do
+        word = 'foxez'
 
-      presenter = WordValidationPresenter.new(word)
+        presenter = WordValidationPresenter.new(word)
 
-      message = presenter.word_validation
+        message = presenter.word_validation
 
-      expect(message).to eq("'foxez' is not a valid word.")
+        expect(message).to eq("'foxez' is not a valid word.")
+      end
     end
   end
 end
