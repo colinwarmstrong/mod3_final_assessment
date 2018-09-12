@@ -25,6 +25,6 @@ class OxfordDictionaryService
   end
 
   def message(word_info)
-    "'#{word_info[:results].last[:word]}' is a valid word and its root form is '#{word_info[:results][]}'"
+    "'#{word_info[:results][0][:word]}' is a valid word and its root form is '#{word_info[:results][0][:lexicalEntries][0][:inflectionOf][0][:id]}'."
   end
 end
