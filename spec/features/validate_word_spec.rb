@@ -13,5 +13,17 @@ describe 'A guest user' do
       # Then I should see a message that says "'foxes' is a valid word and its root form is 'fox'."
       expect(page).to have_content("'foxes' is a valid word and its root form is 'fox'.")
     end
+
+    it 'can get a message telling them a word is invalid' do
+      # As a guest user
+      # When I visit "/"
+      visit root_path
+      # And I fill in a text box with "foxez"
+      fill_in :word, with: 'foxez'
+      # And I click "Validate Word"
+      click_on 'Validate Word'
+      # Then I should see a message that says "'foxez' is not a valid word."
+      expect(page).to have_content("'foxez' is not a valid word.")
+    end
   end
 end
