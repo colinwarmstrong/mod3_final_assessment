@@ -8,7 +8,7 @@ describe User, type: :model do
   context 'Instance Methods' do
     it '#score' do
       josh = User.create(id: 1, name: "Josh")
-      sal = User.create(id: 2, name: "Sal")
+      sal  = User.create(id: 2, name: "Sal")
 
       game = Game.create(player_1: josh, player_2: sal)
 

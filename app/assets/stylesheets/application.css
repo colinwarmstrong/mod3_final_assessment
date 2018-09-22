@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ 
 body {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 18px;
@@ -39,4 +40,3 @@ nav {
   text-decoration: none;
   padding-top: 10px;
 }
-

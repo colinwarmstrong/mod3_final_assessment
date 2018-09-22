@@ -4,7 +4,9 @@ class WordValidationPresenter
   end
 
   def word_validation
-    if response.status == 200
+    if word.nil?
+      "Enter a word to check its' validity and root form."
+    elsif response.status == 200
       message(parse_response)
     else
       "'#{word}' is not a valid word."
